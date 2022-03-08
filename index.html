@@ -44,8 +44,18 @@ function draw_b() {
   var b_context = b_canvas.getContext("2d");
   b_context.fillRect(50, 25, 150, 100);
 }
-	
-	
+
+function draw_canvas(){
+var b_canvas = document.getElementById("b");
+var b_context = b_canvas.getContext("2d");
+b_context.fillRect(50, 25, 150, 100);
+}
+
+function name_canvas(){
+context.font = "bold 12px sans-serif";
+context.fillText("Arianna");
+}
+
 </script>
 
 
@@ -83,7 +93,7 @@ function draw_b() {
 	
 </div>
 	
-<a onclick= "draw_canvas;" class= "w3-btn w3-black"> Draw a Rectangle! </a>
+<a onclick= "draw_canvas();" class= "w3-btn w3-black"> Draw a Rectangle! </a>
 	
 </div>
 
