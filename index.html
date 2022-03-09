@@ -60,8 +60,7 @@ b_context.fillText("Arianna", 20, 50);
 
 function image_canvas(){
 var b_canvas = document.getElementById("myCanvas");
-//var b_context = b_canvas.getContext("2d");
-var b_context = b_canvas.getContext("Image");
+var b_context = b_canvas.getContext("2d");
 var piano = new Image();
 piano src = "Piano.jpeg"
 piano.onload = () => b_context.drawImage(Piano,0,0)
