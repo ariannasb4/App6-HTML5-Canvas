@@ -40,36 +40,46 @@ var docMod = document.lastModified; // loads last modified time stamp into docMo
 alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
 console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
 
+//the function below will be for creating the canvas on website
 function draw_b() {
   var b_canvas = document.getElementById("myCanvas");
+//both variables define the canvas variables used for the other functions
   var b_context = b_canvas.getContext("2d");
-  b_context.fillRect(50, 25, 150, 100);
+  b_context.fillRect(50, 25, 150, 100);//dimensions of canvas
 }
 
+//function below draws the rectangle when the "Draw a Rectangle!" button is clicked
 function draw_canvas(){
 var b_canvas = document.getElementById("myCanvas");
+//both variables allow the rectangle to be drawn in the canvas
 var b_context = b_canvas.getContext("2d");
-b_context.fillRect(50, 25, 150, 100);
+b_context.fillRect(50, 25, 150, 100);//dimensions of rectangle
 }
 
+//function below writes my name (Arianna) when the "Write Name!" button is clicked
 function name_canvas(){
 var b_canvas = document.getElementById("myCanvas");
+//both variables allow my name to be written in the canvas
 var b_context = b_canvas.getContext("2d");
 b_context.font = "bold 30px sans-serif";
 b_context.fillText("Arianna", 200, 100);
+//both of theses "context" statements above set up how the name will be formated with font and location on the canvas 
 }
 
+//function below displays the picture of a piano when "Image!" button is clicked
 function image_canvas(){
 var b_canvas = document.getElementById("myCanvas");
+//both variables allow the image to be displayed in the canvas
 var b_context = b_canvas.getContext("2d");
-var picture = new Image();
-picture.src = "Piano.jpeg";
-picture.onload = () => b_context.drawImage(picture,0,0);
+var picture = new Image();//this variable defines the image 
+picture.src = "Piano.jpeg";//tells what photo to display
+picture.onload = () => b_context.drawImage(picture,0,0);//this sets up how the picture will be loaded and placed in the canvas 
 }
-	
+
+//function below displays clears the canvas when the "Clear!" button is clicked	
 function clear_canvas(){
-var b_canvas = document.getElementById("myCanvas");
-b_canvas.width = b_canvas.width;
+var b_canvas = document.getElementById("myCanvas");//variable allows the clearing of the canvas
+b_canvas.width = b_canvas.width;//this defines what the whole canvas will be cleared
 }
 </script>
 
