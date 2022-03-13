@@ -21,7 +21,9 @@ The goal of this code is to create a canvas and underneath it have functioning b
 and a button that clears everything on the canvas.
 
 Known Issues:
-blah, blah, blah, blah
+Issues that I had included overall trying to make the buttons work and getting my name to be displayed where it's not covered by the rectangle. Also, there
+was a point where the image would not be displayed when the button was clicked and coding it through it's URL, so I needed to download the image 
+and code it based of it being downloaded.
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
 -->
@@ -33,7 +35,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
       <link rel="stylesheet" href="w3.css">
       <link rel="stylesheet" href="w3-colors-flat.css">
    </head> 
-
+<!-- Section above will diplay the title of the page -->
 
 <script>
 var docMod = document.lastModified; // loads last modified time stamp into docMod variable
@@ -76,7 +78,7 @@ picture.src = "Piano.jpeg";//tells what photo to display
 picture.onload = () => b_context.drawImage(picture,0,0);//this sets up how the picture will be loaded and placed in the canvas 
 }
 
-//function below displays clears the canvas when the "Clear!" button is clicked	
+//function below clears the canvas when the "Clear!" button is clicked	
 function clear_canvas(){
 var b_canvas = document.getElementById("myCanvas");//variable allows the clearing of the canvas
 b_canvas.width = b_canvas.width;//this defines what the whole canvas will be cleared
@@ -86,6 +88,7 @@ b_canvas.width = b_canvas.width;//this defines what the whole canvas will be cle
 
 
 <style>	
+//This area below is used to create how the page will be displayed
 .body {
      margin: 0em;
 }
@@ -107,40 +110,41 @@ b_canvas.width = b_canvas.width;//this defines what the whole canvas will be cle
 
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
-	<h1>App6---HTML5-Canvas</h1>
+	<h1>App6---HTML5-Canvas</h1> 
+<!--This will be the header of the page, which will be displayed above the content of the page.-->
 	
 </div>
 	
 <div id="content" class="w3-container">
-	<p>Click the buttons below! </p>
-	<canvas id="myCanvas" width="500" height="250" style="border:1px solid #000000;">
-</canvas>
+	<p>Click the buttons below! </p> <!-- This is the content that will be displayed above the canvas telling the viewer to click the buttons on the page.-->
+	<canvas id="myCanvas" width="500" height="250" style="border:1px solid #000000;"> 
+</canvas> <!--This will be the canvas and its dimensions and formatting -->
 	
 </div>
 	
-<a onclick= "draw_canvas();" class= "w3-btn w3-black"> Draw a Rectangle! </a>
+<a onclick= "draw_canvas();" class= "w3-btn w3-black"> Draw a Rectangle! </a> <!--Button for drawing a rectangle in the canvas -->
 	
 </div>
 
-<a onclick= "name_canvas();" class= "w3-btn w3-black"> Write Name! </a>
+<a onclick= "name_canvas();" class= "w3-btn w3-black"> Write Name! </a> <!-- Button for writting my name in the canvas-->
 
 </div>
 
-<a onclick= "image_canvas();" class= "w3-btn w3-black"> Image! </a>
+<a onclick= "image_canvas();" class= "w3-btn w3-black"> Image! </a> <!-- Button for displaying image in the canvas -->
 
 </div>
 
-<a onclick= "clear_canvas();" class= "w3-btn w3-black"> Clear! </a>
+<a onclick= "clear_canvas();" class= "w3-btn w3-black"> Clear! </a> <!-- Button for clearing the canvas -->
 
 </div>
 
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
-
+<!-- content regarding DIY Diagnostic projects -->
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
 </footer>
-
+<!-- section above is for the footer of the page -->
 </body>
 </html>
